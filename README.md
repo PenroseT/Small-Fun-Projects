@@ -31,3 +31,21 @@ After breaking the code, I created an implementation of some basic functionaliti
 <img src="ElectraACRemote/remote_arduino.jpg" alt="remote" width="300"/>
 
 *Figure 4*: Nano prototype setup with the IR receiver and remote simulator.
+
+## MagSim
+
+Tkinter GUI app with the real-time Ising model Monte Carlo simulations. Not made to be efficient.
+
+<img src="MagSim/magsim.png" alt="magsim" width="300"/>
+
+*Figure 5*: GUI app for real-time Ising simulations.
+
+## BPlotter
+
+GUI app for blood pressure tracking and plotting.
+
+## PopcornStatistics
+
+The audio signal analysis Python tool analyzes the recorded signal of popcorn popping and plots the time dependence of the pops.
+Used as a demonstration of the central limit theorem.
+
