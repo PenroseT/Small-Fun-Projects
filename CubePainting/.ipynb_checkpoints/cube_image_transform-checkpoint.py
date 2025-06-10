@@ -120,14 +120,21 @@ def load_my_palette():
     
     return scrc
 
-def load_my_palette2():
+def load_my_palette2(equal=False):
     # Loads the palette 2 in pickled files
     # specified by names given in the code
     
-    with open("colors2.pickle", "rb") as handle:
-        my_colors = pickle.load(handle)
-    with open("colors_rgb2.pickle", "rb") as handle:
-        my_colors_rgb = pickle.load(handle)
+    if equal:
+        with open("colors2eq.pickle", "rb") as handle:
+            my_colors = pickle.load(handle)
+        with open("colors_rgb2eq.pickle", "rb") as handle:
+            my_colors_rgb = pickle.load(handle)   
+    elif not equal:
+        with open("colors2.pickle", "rb") as handle:
+            my_colors = pickle.load(handle)
+        with open("colors_rgb2.pickle", "rb") as handle:
+            my_colors_rgb = pickle.load(handle)
+    
     
     scrc = create_scarce_palette(my_colors_rgb, my_colors)
     
@@ -383,24 +390,26 @@ def display_all(image_original, scarce_palette, imagesize=(40, 30), m=1,
     fig, axs = plt.subplots(1, 5, figsize=(20, 10))
 
     axs[0].imshow(image)
-    axs[0].set_title("Original")
+    axs[0].set_title("Original", fontsize=35)
     axs[0].axis("off")
 
     axs[1].imshow(image_scarce)
-    axs[1].set_title("Sequential")
+    axs[1].set_title("Sequential", fontsize=35)
     axs[1].axis("off")
     
     axs[2].imshow(image_scarce_mc)
-    axs[2].set_title("Sequential+MC")
+    axs[2].set_title("Sequential+MC", fontsize=35)
     axs[2].axis("off")
     
     axs[3].imshow(image_scarce_permute)
-    axs[3].set_title("Permuted")
+    axs[3].set_title("Permuted", fontsize=35)
     axs[3].axis("off")
 
     axs[4].imshow(image_scarce_permute_mc)
-    axs[4].set_title("Permuted+MC")
+    axs[4].set_title("Permuted+MC", fontsize=35)
     axs[4].axis("off")
+
+    plt.tight_layout()
 
     plt.axis("off")
     if save==True:
