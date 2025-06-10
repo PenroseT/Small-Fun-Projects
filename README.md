@@ -36,7 +36,7 @@ After breaking the code, I created an implementation of some basic functionaliti
 
 Tkinter GUI app with the real-time Ising model Monte Carlo simulations. Not made to be efficient.
 
-<img src="MagSim/magsim.png" alt="magsim" width="300"/>
+<img src="MagSim/images/magsim.png" alt="magsim" width="300"/>
 
 *Figure 5*: GUI app for real-time Ising simulations.
 
@@ -48,4 +48,12 @@ GUI app for blood pressure tracking and plotting.
 
 The audio signal analysis Python tool analyzes the recorded signal of popcorn popping and plots the time dependence of the pops.
 Used as a demonstration of the central limit theorem.
+
+## ManyBodySolver
+
+Exact diagonalization methods for many-body lattice systems.
+
+## Sharpen (mix)
+
+Scheme script for GIMP for image sharpening.
 
